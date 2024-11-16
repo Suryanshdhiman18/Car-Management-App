@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details</title>
+    <!-- CSS References -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+    <style>
+        /* Custom CSS for Car Details Page */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+            padding-top: 20px;
+        }
+
+        .header {
+            background-color: #343a40;
+            padding: 15px 0;
+        }
+
+        .header .Navbar a {
+            color: white;
+            margin-right: 20px;
+        }
+
+        .header .Navbar a:hover {
+            color: #ff9900;
+        }
+
+        #car-detail {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        #car-detail h2 {
+            font-size: 2rem;
+            color: #333;
+            text-align: center;
+        }
+
+        #car-detail img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        #car-detail h4 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #car-detail p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .btn-warning {
+            background-color: #ff9900;
+            border-color: #ff9900;
+            color: white;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+            color: white;
+        }
+
+        .btn-warning:hover,
+        .btn-danger:hover {
+            opacity: 0.9;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #ff9900;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sticky Header -->
+    <div class="header">
+        <div class="Navbar" id="Nav">
+            <div class="logo-img-new">
+                <img id="logo-new" src="img/new logo.png">
+            </div>
+            <div></div>
+            <div class="Navbar__Link Navbar__Link-toggle">
+                <i class="fas fa-bars fa-2x" id="toggler"></i>
+            </div>
+            <div class="Navbar__Items" id="nav__toggler">
+                <div class="Navbar__Link">
+                    <a class="a-header" href="index.html">HOME</a>
+                </div>
+                <div class="Navbar__Link">
+                    <a class="a-header" href="Admin Login/index.html">ADMIN LOGIN</a>
+                </div>
+                <div class="Navbar__Link">
+                    <a class="a-header" href="User Login/index.html">USER LOGIN</a>
+                </div>
+                <div class="Navbar__Link">
+                    <a class="a-header" href="signUpForm.html">SIGNUP</a>
+                </div>
+                <div class="Navbar__Link">
+                    <a class="a-header" href="Contact Us/contact_us.html">CONTACT US</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Car Detail Section -->
+    <div class="container mt-5" id="car-detail">
+        <h2>Car Details</h2>
+
+        <div id="car-detail">
+            <!-- Car image -->
+            <div class="text-center">
+                <img src="car-image.jpg" alt="Car Image" id="car-image">
+            </div>
+
+            <!-- Car title, description, and tags -->
+            <div class="mt-4">
+                <h4 id="car-title">Car Title</h4>
+                <p id="car-description">Car Description</p>
+                <p><strong>Tags:</strong> <span id="car-tags">Car Tags</span></p>
+            </div>
+
+            <!-- Edit and Delete buttons -->
+            <div class="mt-3">
+                <button class="btn btn-warning" id="edit-button">Edit</button>
+                <button class="btn btn-danger" id="delete-button">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="connectivity">
+            <div class="connect">
+                <i class="fab fa-facebook-square"></i>
+                <a href="#">FACEBOOK</a>
+            </div>
+            <div class="connect">
+                <i class="fab fa-linkedin"></i>
+                <a href="#">LINKED IN</a>
+            </div>
+            <div class="connect">
+                <i class="fab fa-twitter-square"></i>
+                <a href="#">TWITTER</a>
+            </div>
+            <div class="connect">
+                <i class="fab fa-instagram"></i>
+                <a href="#">INSTAGRAM</a>
+            </div>
+        </div>
+        <h5>&copy; CAR MANAGERS</h5>
+    </footer>
+
+    <!-- JavaScript to handle dynamic data -->
+    <script src="js/app.js"></script>
+    <script src="js/toggler.js"></script>
+    <script src="js/car-detail.js"></script>
+
+</body>
+
+</html>
+
