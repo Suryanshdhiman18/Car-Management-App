@@ -1,102 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>USER LOGIN</title>
-    <link rel="stylesheet" type="text/css" href="./main.css">
-    <link rel="stylesheet" type="text/css" href="./fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/global.css">
+<html>
 
-    <!-- Web Fonts -->
+<head>
+    <title>Car Managers</title>
+
+    <!-- DEFINING THE CHAR SET-->
+    <meta charset="utf-8">
+
+    <!--WEB FONTS REFERENCES-->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Montserrat:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
 
-    <!-- FONT AWESOME CSS REFERENCE-->
+    <!-- SETTING VIEWPORT-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS REFERENCE TO BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
-    <script type="text/javascript" src="../js/jquery.min.js"></script>
+
+    <!-- EXTERNAL STYLES REFERENCE-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
 </head>
+
 <body>
 
     <!-- STICKY HEADER -->
     <div class="header">
         <div class="Navbar" id="Nav">
             <div class="logo-img-new">
-                <!-- LOGO -->
-                <!-- <img id="logo-new" src="../img/logo-3.png"> -->
+                <img id="logo-new" src="img/new logo.png">
             </div>
             <div></div>
             <div class="Navbar__Link Navbar__Link-toggle">
-                <i class="fas fa-bars fa-2x"></i>
+                <i class="fas fa-bars fa-2x" id="toggler"></i>
             </div>
-            <div class="Navbar__Items">
-                    <div class="Navbar__Link">
-                        <a class="a-header" href="../index.html">HOME</a>
-                    </div>
-                    <div class="Navbar__Link">
-                        <a class="a-header" href="../Admin Login/index.html">ADMIN LOGIN</a>
-                    </div>
-                    <div class="Navbar__Link">
-                        <a class="a-header" href="../User Login/index.html">USER LOGIN</a>
-                    </div>
-                    <div class="Navbar__Link">
-                        <a class="a-header" href="../signUpForm.html">SIGNUP</a>
-                    </div>
-                    <div class="Navbar__Link">
-                        <a class="a-header" href="../Contact Us/contact_us.html">CONTACT US</a>
-                    </div>
+            <div class="Navbar__Items" id="nav__toggler">
+                <div class="Navbar__Link">
+                    <a class="a-header" href="index.html">HOME</a>
+                </div>
+                <div class="Navbar__Link">
+                    <a class="a-header" href="Admin Login/index.html">ADMIN LOGIN</a>
+                </div>
+                <div class="Navbar__Link">
+                    <a class="a-header" href="User Login/index.html">USER LOGIN</a>
+                </div>
+                <div class="Navbar__Link">
+                    <a class="a-header" href="signUpForm.html">SIGNUP</a>
+                </div>
+                <div class="Navbar__Link">
+                    <a class="a-header" href="Contact Us/contact_us.html">CONTACT US</a>
+                </div>
             </div>
         </div>
     </div>
     <!-- END OF STICKY HEADER -->
 
-    <div class="limiter">
-        <div class="container-login">
-            <div class="wrap-login">
-                <div class="login-pic">
-                    <img src="./img-01.png" alt="IMG">
+    <!-- PARALLAX LOADER-->
+    <div class="parallax_loader " id="home">
+        <div class="container-fluid bg-overlay">
+            <div class="row name_comp">
+                <div class="col-md-2 "></div>
+                <div class="col-md-8">
+                    <h1 class="display-1 g-font-weight--500 g-color--primary"><b>Car Managers</b></h1>
                 </div>
-                <form class="login-form" action="../newVersion_usertable.html" onsubmit="return validate()">
-                    <span class="login-form-title">
-                        User Login
-                    </span>
-                    <div class="wrap-input">
-                        <input class="input" type="text" name="email" id="username" placeholder="Email">
-                        <span class="focus-input"></span>
-                        <span class="symbol-input100">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </span>
-                    </div>
-                
-                    <div class="wrap-input">
-                        <input class="input" type="password" name="pass" id="password" placeholder="Password">
-                        <span class="focus-input"></span>
-                        <span class="symbol-input100">
-                            <i class="fa fa-lock" aria-hidden="true"></i>
-                        </span>
-                    </div>
-                    <div class="container-login-form-btn">
-                        <button class="login-form-btn">
-                            Login
-                        </button>
-                    </div>
-                    <div class="text-center p-t-136">
-						<a class="txt2" href="../signUpForm.html">
-							Create your Account
-						</a>
-					</div>
-                    </form>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row name_comp">
+                <div class="col-xs-12">
+                    <h3 class="display-4 g-color--white">World's most famous car managerial company with over 1 MILLION+
+                        trusted users.</h3>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- END OF PARALLAX LOADER -->
 
-    <!-- FOOTER-->
+    <!-- ABOUT CAR RENTERS -->
+    <div class="g-row-col--xs-10 about_sec" id="about">
+        <div>
+            <h1 class="display-3 g-color--primary g-font-weight--300 para_content"><b>ABOUT US</b></h1>
+        </div>
+        <div class="g-color--dark-light g-font-family--Alegreya" style="font-size: 1.2em;">
+            <p>Welcome to our Car Management Application, your ultimate solution for seamless vehicle management.</p>
+            <ul>
+                <li>Add cars with up to 10 images, detailed descriptions, and tags.</li>
+                <li>Search and manage your car listings effortlessly.</li>
+                <li>View, update, or delete cars with a few clicks.</li>
+            </ul>
+        </div>
+    </div>
+    <!-- END ABOUT -->
+
+    <!-- CAR MANAGEMENT FUNCTIONALITIES -->
+    <div class="container" id="car-management">
+        <h2 class="text-center">Car Management</h2>
+
+        <!-- Add Car Section -->
+        <section id="add-car-section">
+            <h3>Add a Car</h3>
+            <form id="add-car-form">
+                <div class="form-group">
+                    <label for="car-title">Title:</label>
+                    <input type="text" id="car-title" class="form-control" placeholder="Car Title" required>
+                </div>
+                <div class="form-group">
+                    <label for="car-description">Description:</label>
+                    <textarea id="car-description" class="form-control" placeholder="Enter Car Description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="car-tags">Tags:</label>
+                    <input type="text" id="car-tags" class="form-control" placeholder="Tags (comma-separated)" required>
+                </div>
+                <div class="form-group">
+                    <label for="car-images">Upload Images (Max 10):</label>
+                    <input type="file" id="car-images" class="form-control" multiple accept="image/*">
+                </div>
+                <button type="submit" class="btn btn-primary">Add Car</button>
+            </form>
+        </section>
+
+        <!-- Search Cars Section -->
+        <section id="search-section">
+            <h3>Search Cars</h3>
+            <div class="form-group">
+                <input type="text" id="search-bar" class="form-control" placeholder="Search by title, description, or tags">
+            </div>
+            <button id="search-button" class="btn btn-secondary">Search</button>
+        </section>
+
+        <!-- Car List Section -->
+        <section id="car-list-section">
+            <h3>My Cars</h3>
+            <ul id="car-list" class="list-group"></ul>
+        </section>
+
+
+		<!-- Search car selection -->
+		 <!-- Search Cars Section (Updated) -->
+<section id="search-section">
+    <h3>Search Cars</h3>
+    <div class="form-group">
+        <input type="text" id="search-bar" class="form-control" placeholder="Search by title, description, or tags">
+    </div>
+    <button id="search-button" class="btn btn-secondary">Search</button>
+</section>
+
+
+<!-- start new -->
+<!-- Car List Section (Updated) -->
+<section id="car-list-section">
+    <h3>My Cars</h3>
+    <ul id="car-list" class="list-group">
+        <!-- Example item, this will be dynamically generated -->
+        <li class="list-group-item">
+            <h4>Car Title</h4>
+            <p>Car Description</p>
+            <a href="car-detail.html?id=1" class="btn btn-info">View Details</a>
+            <button class="btn btn-warning" onclick="editCar(1)">Edit</button>
+            <button class="btn btn-danger" onclick="deleteCar(1)">Delete</button>
+        </li>
+        <!-- More cars will be listed here -->
+    </ul>
+</section>
+
+<!-- Product Details -->
+
+<!-- Car Detail Page -->
+<section id="car-detail-section">
+    <h3>Car Details</h3>
+    <div id="car-detail">
+        <img src="car-image.jpg" alt="Car Image" class="img-fluid">
+        <h4 id="car-title">Car Title</h4>
+        <p id="car-description">Car Description</p>
+        <p><strong>Tags:</strong> <span id="car-tags">Car Tags</span></p>
+
+        <!-- Edit and Delete buttons -->
+        <button class="btn btn-warning" onclick="editCar(1)">Edit</button>
+        <button class="btn btn-danger" onclick="deleteCar(1)">Delete</button>
+    </div>
+</section>
+
+
+<!-- end -->
+
+    </div>
+    <!-- END CAR MANAGEMENT -->
+
+    <!-- FOOTER -->
     <footer class="g-bg-color--dark-light g-color--white-opacity">
         <div class="foot">
             <div class="padd__needed">
-                <!-- LOGO -->
-                <!-- <img id="logo" src="../img/logo-3.png"> -->
+				<!-- LOGO -->
+                <!-- <img id="logo" src="img/logo-3.png"> -->
             </div>
             <div class="connectivity padd__needed">
                 <div class="connect">
@@ -117,13 +218,20 @@
                 </div>
             </div>
             <div class="padd__needed">
-                <h6 class="g-color--primary">&copy CAR RENTERS</h6>
+                <h5 class="g-color--primary">&copy CAR MANAGERS</h5>
             </div>
         </div>
     </footer>
-    <!--END OF FOOTER-->
-        <script src="../js/user_login.js"></script>
-        <script src="../js/toggler.js"></script>
-        <script src="../js/index.js"></script>
+    <!-- END FOOTER -->
+
+    <script src="js/app.js"></script>
+    <script src="js/toggler.js"></script>
+	<script src="js/admin_login.js"></script>
+	<script src="js/user_login.js"></script>
+	<script src="js/addCar.js"></script>
+	<script src="js/signUpForm.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/car-detail.js"></script>
 </body>
+
 </html>
