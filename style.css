@@ -1,0 +1,567 @@
+body, html {
+    height: 100%;
+    width: 100%;
+
+}
+.a-header,.a-footer{
+  text-decoration: none;
+  font-size: 1.3em;
+  color: #fff !important;
+
+}
+
+.a-header:hover {
+  text-decoration: none;
+  color: #13b1cd !important;
+}
+
+.Navbar{
+  width: 96%;
+  font-size: 11.5pt;
+  font-family: Playfair;
+}
+@media(max-width: 54em)
+{
+  .logo-img-new{
+    display: inline;
+  }
+
+  #logo-new{
+      height: 2.2em;
+      width:auto;
+  }
+
+  .Navbar {
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    background-color: rgba(102,102,102,0);
+    display: flex;
+    padding: 16px;
+    font-family: sans-serif;
+    color: black;
+  }
+
+  .Navbar__Link {
+    padding-right: 8px;
+    padding-top: 1em;
+  }
+
+  .Navbar__Items {
+    text-align: center;
+  }
+
+  .Navbar__Items, .Navbar {
+     flex-direction: column;
+  }
+
+  .Navbar__Items {
+      display:none;
+      color: black;
+  }
+  .Navbar__ToggleShow {
+      display: flex;
+  }
+
+  .Navbar__Link-toggle {
+      align-self: flex-end;
+      display: initial;
+      position: absolute;
+      cursor: pointer;
+  }
+}
+@media(min-width: 54.1em)
+{
+  .Navbar{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 16px;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(102,102,102,0);
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+  }
+
+  .logo-img-new{
+    display: inline;
+  }
+
+  #logo-new{
+      height: 2.2em;
+      width: auto;
+  }
+
+  .Navbar__Link-toggle{
+    display: none;
+  }
+
+  .Navbar__Items{
+    float: right;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1.2fr;
+    text-align: right;
+  }
+
+  .Navbar__Link{
+    padding-right: 2em; 
+    float: right;
+  }
+}
+.active{
+  background-color: #cecece !important;
+  color: black !important;
+}
+.active .a-header{
+  color: black !important;
+}
+/*
+header{
+    position: fixed;
+    padding-top: 2px;
+    width: 100%;
+    display: inline;
+    padding: 1em;
+    background-color: rgba(102, 102, 102,0.3);
+}
+
+.logo-img{
+  display: inline;
+}
+
+.navbar{
+    overflow: hidden;
+    display: inline;
+    float: right;
+}
+
+.navbar a{
+    float: right;
+    display: block;
+    padding: 0 2em; 
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.navbar a:hover{
+    color: red;
+}
+
+ul{
+  list-style-type: none;
+  
+}
+li{
+  display:inline;
+  padding: 0 2em;
+
+}*/
+/*parallax-effect*/
+.parallax_loader{
+		
+	background-image: url('../img/loader-1.jpg');
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.bg-overlay{
+  width: 100%;
+  height: 100%;
+  display: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgb(0,0,0,0.5);
+}
+
+.para_content{
+    text-align: center;
+}
+
+.name_comp{
+	text-align:center;
+	padding-top: 10%;
+}
+
+.about_sec{
+	
+	padding: 4em;
+}
+
+#logo{
+    height: 3.5em;
+    width:auto;
+}
+.car_options{
+    text-align: center;
+}
+
+.car_slide{
+    width: 100%;
+    height: 18em;
+}
+
+.slide{
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  overflow: hidden;
+}
+.slide img{
+  display: inline-block;
+  vertical-align: middle;
+}
+.slide-content{
+  font-size : 1.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  width:100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding:20px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background-color: rgba(225, 35, 69, 0.4);
+  color: #ffffff;
+  transition: transform 1s ease;
+  -webkit-transition: transform 0.3s ease;
+}
+.slide:hover .slide-content{
+  transform:translate(0, 0);
+  -webkit-transform:translate(0, 0);
+}
+
+/*Directions*/
+.slide-top .slide-content{
+  transform:translate(0, -100%);
+  -webkit-transform:translate(0, -100%);
+}
+.slide-left .slide-content{
+  transform:translate(-100%, 0);
+  -webkit-transform:translate(-100%, 0);
+}
+.slide-right .slide-content{
+  transform:translate(100%, 0);
+  -webkit-transform:translate(100%, 0);
+}
+.slide-bottom .slide-content{
+  transform:translate(0, 100%);
+  -webkit-transform:translate(0, 100%);
+}
+#logo{
+  height: 1.2em;
+  width: auto;
+}
+@media (min-width: 80.1em)
+{
+  .slide_car{
+    height: 50%;
+    padding: 2em  5em 5em 5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3em;
+  }
+}
+@media (max-width: 80em)
+{
+  .slide_car{
+    height: 50%;
+    padding: 2em  5em 5em 5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5em;
+  }
+}
+@media (max-width: 50em)
+{
+  .slide_car{
+    height: 50%;
+    width: 85%;
+    padding: 2em  5em 5em 5em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5em;
+  }
+}
+
+.connectivity{
+  padding: 0.4
+}
+
+.connectivity .a-footer{
+  text-decoration: none;
+  color: #cecece !important;
+}
+
+.connectivity .a-footer:hover{
+  text-decoration: none;
+  color: #13b1cd !important;
+}
+
+.connect{
+  display: inline;
+}
+
+.foot{
+  font-family: Playfair;
+}
+
+@media(max-width: 54em)
+{
+  .foot{
+    padding: 2em;
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    justify-content: center;
+  }
+  .connectivity{
+    display: inline;
+  }
+  .connect{
+    display: inline;
+  }
+  .padd__needed{
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media(min-width: 54.1em){
+  .foot{
+      padding: 2em;
+      width:100%;
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      align-items: center;
+      justify-content: center;
+    }
+    .connectivity{
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     align-items: center;
+     justify-content: center;
+    }
+}
+
+
+/* Add Car Section */
+#add-car-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+#add-car-section h3 {
+  color: #007bff;
+}
+
+#add-car-form .form-group {
+  margin-bottom: 15px;
+}
+
+#add-car-form label {
+  font-weight: bold;
+  color: #555;
+}
+
+#add-car-form input,
+#add-car-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#add-car-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+#add-car-form input[type="file"] {
+  border: none;
+}
+
+#add-car-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#add-car-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Search Cars Section */
+#search-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+#search-bar {
+  width: calc(100% - 100px);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+#search-button {
+  width: 80px;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#search-button:hover {
+  background-color: #218838;
+}
+
+/* Car List Section */
+#car-list-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#car-list {
+  list-style: none;
+  padding: 0;
+}
+
+#car-list li {
+  background-color: #f8f9fa;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#car-list li:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.car-actions button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.car-actions .view-btn {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.car-actions .view-btn:hover {
+  background-color: #138496;
+}
+
+.car-actions .edit-btn {
+  background-color: #ffc107;
+  color: white;
+}
+
+.car-actions .edit-btn:hover {
+  background-color: #e0a800;
+}
+
+.car-actions .delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.car-actions .delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* View Car Details Section */
+#view-car-details {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: none; /* Will show dynamically via JS */
+}
+
+#view-car-details h3 {
+  color: #343a40;
+}
+
+#view-car-details img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Update Car Section */
+#update-car-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  display: none; /* Will show dynamically via JS */
+}
+
+#update-car-section form .form-group {
+  margin-bottom: 15px;
+}
+
+#update-car-section button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#update-car-section button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #search-bar {
+      width: calc(100% - 90px);
+  }
+
+  .car-actions button {
+      margin-left: 5px;
+  }
+}
